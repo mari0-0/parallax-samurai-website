@@ -154,10 +154,11 @@ main {
 
 .moon {
   position: absolute;
-  width: 250px;
+  width: 220px;
   top: calc(50% - 320px);
   left: calc(50%);
   mix-blend-mode: screen;
+  /* opacity: 0.9; */
   z-index: 4;
 	pointer-events: none;
 
@@ -167,11 +168,11 @@ main {
 .text {
   position: absolute;
   z-index: 5;
-  top: calc(29%);
+  top: calc(24%);
   left: calc(75%);
   text-align: center;
   font-family: "Vandenbroucke", sans-serif;
-  font-size: 8em;
+  font-size: 7em;
   color: #900d09;
   line-height: 7.5rem;
 	pointer-events: auto;
@@ -281,12 +282,17 @@ main {
 @media (max-width: 1500px) {
 	.text{
 		font-size: 6em;
+    top: 15%
 	}
 	.text h2{
 		font-size: 6rem;
 	}
   .trees{
     top: 40%
+  }
+
+  .stones{
+    top: 90%
   }
 }
 
@@ -299,23 +305,35 @@ main {
 	.text h2{
 		font-size: 3rem;
 	}
+  .bg-img{
+    top:50%
+  }
 
 	.trees{
-    transform: translate(-50%, 0%);
-		top: 0%;
+    /* transform: translate(-50%, -50%); */
+		top: 50%;
+    left: 54%
 	}
+  .tower-2{
+    width: 120%;
+    top: 60%
+  }
 }
 
 @media (max-width: 860px) {
 	.text{
-		font-size: 6em;
+		font-size: 5em;
 		line-height: 6rem;
-		top: 35%;
+		top: 30%;
 		left: 50%;
 	}
 	.text h2{
 		font-size: 5rem;
 	}
+
+  .moon{
+    top: 10%
+  }
 
 	.bg-img{
 		width: 1800px;
@@ -359,7 +377,8 @@ main {
 	.trees{
 		/* height: 100%; */
 		left: 50%;
-    transform: translate(-50%, 0%);
+    top: 30%
+    /* transform: translate(-50%, 0%); */
 	}
 
   .samurai{
@@ -382,9 +401,14 @@ main {
   }
 
   .tower-2{
-    width: 160%;
-    top: 68%;
+    width: 90%;
+    top: 44%;
     left: 27%
+  }
+
+  .text{
+    top: 20%;
+    font-size: 4rem;
   }
 }
 
@@ -407,7 +431,7 @@ main {
 
   .tower-2{
     width: 180%;
-    top: 65%;
+    top: 69%;
     left: 35%
   }
 
@@ -417,6 +441,12 @@ main {
   .house-3{
     top: 75%
   }
+  .tower-2{
+    width: 180%;
+    top: 54%;
+    left: 35%
+  }
+
 }
 
 @media (max-width: 1200px) and (min-height: 1300px){
