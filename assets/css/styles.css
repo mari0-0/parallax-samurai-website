@@ -225,7 +225,7 @@ main {
 .trees {
   position: absolute;
   width: 110%;
-  top: calc(50%);
+  /* top: calc(50%); */
   left: calc(50% - 60px);
   z-index: 11;
 }
@@ -272,6 +272,12 @@ main {
 	pointer-events: none;
 }
 
+@media (min-width: 1500px){
+  .trees{
+    top: 50%
+  }
+}
+
 @media (max-width: 1500px) {
 	.text{
 		font-size: 6em;
@@ -279,6 +285,9 @@ main {
 	.text h2{
 		font-size: 6rem;
 	}
+  .trees{
+    top: 40%
+  }
 }
 
 @media (max-width: 1200px) {
@@ -292,11 +301,12 @@ main {
 	}
 
 	.trees{
-		top: 40%
+    transform: translate(-50%, 0%);
+		top: 0%;
 	}
 }
 
-@media (max-width: 725px) {
+@media (max-width: 860px) {
 	.text{
 		font-size: 6em;
 		line-height: 6rem;
@@ -315,7 +325,7 @@ main {
 
 	.house-3{
 		width: 200%;
-		top: 75%;
+		top: 60%;
 	}
 
 	.house-2{
@@ -332,13 +342,13 @@ main {
 	.tower-1{
 		width: 35%;
 		top: 70%;
-		left: 55%;
+		left: 75%;
 	}
 
 	.tower-2{
 		width: 150%;
 		top: 70%;
-		left: 25%;
+		left: 20%;
 	}
 
 	.mountains{
@@ -346,11 +356,71 @@ main {
     top: 60%;
     left: 55%;
 	}
-
-
 	.trees{
 		/* height: 100%; */
-		top: 25%;
 		left: 50%;
+    transform: translate(-50%, 0%);
 	}
+
+  .samurai{
+    width: 200px;
+    top: calc(88% - 0px);
+    left: calc(80% );  }
+}
+
+@media (max-width: 768px){
+  nav ul li{
+    display: none;
+  }
+  .hamburger{
+    display: flex;
+  }
+
+  .house-3{
+    width: 250%;
+    top: 60%
+  }
+
+  .tower-2{
+    width: 160%;
+    top: 68%;
+    left: 27%
+  }
+}
+
+@media (max-width: 500px){
+  .text{
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .text h2{
+    font-size: 2.5rem;
+  }
+  .stones{
+    top: 90%;
+  }
+
+  .house-3{
+    width: 250%;
+    top: 68%
+  }
+
+  .tower-2{
+    width: 180%;
+    top: 65%;
+    left: 35%
+  }
+
+}
+
+@media (max-width: 420px){
+  .house-3{
+    top: 75%
+  }
+}
+
+@media (max-width: 1200px) and (min-height: 1300px){
+  .house-3{
+    top: 60%
+  }
 }
