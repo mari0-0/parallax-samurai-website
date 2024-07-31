@@ -13,9 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
       let speedx = el.dataset.speedx;
       let speedy = el.dataset.speedy;
 
-      el.style.transform = `translateX(calc(-50% + ${
-        -xValue * speedx
-      }px)) translateY(calc(-50% + ${-yValue * speedy}px))`;
+      if(el.classList.contains('trees')){
+        el.style.transform = `translateX(calc(0 + ${
+          -xValue * speedx
+        }px)) translateY(calc(0 + ${-yValue * speedy}px))`;
+      } else {
+        el.style.transform = `translateX(calc(-50% + ${
+          -xValue * speedx
+        }px)) translateY(calc(-50% + ${-yValue * speedy}px))`;
+      }
+
+
     });
   });
 

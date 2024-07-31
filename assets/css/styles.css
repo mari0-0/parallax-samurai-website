@@ -114,7 +114,7 @@ main {
   position: relative;
   background-color: #132525;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 	max-height: 100vh;
   overflow: hidden;
 }
@@ -145,8 +145,8 @@ main {
 
 .fog-1 {
   position: absolute;
-  width: 100%;
-	height: 200%;
+  width: 120%;
+	height: 120%;
   top: calc(50%) !important;
   left: calc(50%);
   z-index: 3;
@@ -225,9 +225,10 @@ main {
 
 .trees {
   position: absolute;
-  width: 110%;
-  /* top: calc(50%); */
-  left: calc(50% - 60px);
+  width: 100%;
+  top: -5%;
+  left: 0;
+  transform: translate(0,0);
   z-index: 11;
 }
 
@@ -241,8 +242,8 @@ main {
 
 .fog-2 {
   position: absolute;
-  width: 100%;
-	height: 100%;
+  width: 120%;
+	height: 120%;
   top: calc(50%);
   left: calc(50%);
   transform: translate(-50%, -50%);
@@ -273,11 +274,11 @@ main {
 	pointer-events: none;
 }
 
-@media (min-width: 1500px){
+/* @media (min-width: 1500px){
   .trees{
     top: 50%
   }
-}
+} */
 
 @media (max-width: 1500px) {
 	.text{
@@ -287,9 +288,9 @@ main {
 	.text h2{
 		font-size: 6rem;
 	}
-  .trees{
+  /* .trees{
     top: 40%
-  }
+  } */
 
   .stones{
     top: 90%
@@ -309,11 +310,11 @@ main {
     top:50%
   }
 
-	.trees{
-    /* transform: translate(-50%, -50%); */
+	/* .trees{
+    transform: translate(-50%, -50%);
 		top: 50%;
     left: 54%
-	}
+	} */
   .tower-2{
     width: 120%;
     top: 60%
@@ -374,12 +375,7 @@ main {
     top: 60%;
     left: 55%;
 	}
-	.trees{
-		/* height: 100%; */
-		left: 50%;
-    top: 30%
-    /* transform: translate(-50%, 0%); */
-	}
+
 
   .samurai{
     width: 200px;
@@ -413,7 +409,13 @@ main {
 }
 
 @media (max-width: 500px){
+  .bg-img{
+    width: auto;
+    height: 150vh;
+  }
+
   .text{
+    top: 30%;
     font-size: 4rem;
     line-height: 4rem;
   }
@@ -424,9 +426,15 @@ main {
     top: 90%;
   }
 
+  .mountains{
+    width: 220%;
+    top: 70%;
+    left: 55%;
+  }
+
   .house-3{
     width: 250%;
-    top: 68%
+    top: 72%
   }
 
   .tower-2{
@@ -435,18 +443,44 @@ main {
     left: 35%
   }
 
+  .house-2{
+    width: 150%;
+    top: 75%;
+  }
 }
 
-@media (max-width: 420px){
+@media (max-width: 425px){
+  .bg-img{
+    width: auto;
+    height: 150vh;
+  }
+
   .house-3{
-    top: 75%
+    width: 270vw;
+    bottom: 23%
   }
   .tower-2{
     width: 180%;
-    top: 54%;
+    bottom: 34%;
     left: 35%
   }
 
+  .tower-1{
+    top:67%
+  }
+
+  .house-2{
+    width: 190%;
+    top: 74%;
+  }
+
+  .stones{
+    bottom: 15%;
+  }
+
+  .mountains{
+    width: 200%;
+  }
 }
 
 @media (max-width: 1200px) and (min-height: 1300px){
